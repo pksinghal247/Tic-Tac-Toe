@@ -12,7 +12,7 @@ def title(li):
     temp = ""
     for char in li:
         temp = temp + char
-    return temp + "'s"
+    return temp
 
 
 def list(word):
@@ -27,6 +27,8 @@ numbers = [
     ['-', '-', '-'],
     ['-', '-', '-']
 ]
+p1 = ""
+p2 = ""
 
 def header():
     print("\t\t\t\t\t***************************")
@@ -47,7 +49,7 @@ def game():
 
 def value(num1, num2, xo):
     if numbers[num1][num2] == "x" or numbers[num1][num2] == "o":
-        print("\n\t\t\t\t\t\tAlready played...")
+        print("Already played...")
         if xo == "p1":
             return 1
         else:
@@ -181,11 +183,10 @@ def tie():
                 temp.append(False)
             else:
                 temp.append(True)
-    if list.__contains__(temp, True):
+    if temp.__contains__(True):
         return True
     else:
         return False
-
 
 def start():
     print("\n\n")
@@ -199,7 +200,7 @@ def start():
             print("\n" * 100)
             header()
             game()
-            print("\n\t\t\t\t\t", p1, "Turn")
+            print("\n\t\t\t\t\t", p1, "'s turn")
             ch = int(input("\t\t\t\t\tEnter position : "))
             if ch < 10:
                 i = set(ch, "p1")
@@ -211,7 +212,7 @@ def start():
             print("\n" * 100)
             header()
             game()
-            print("\n\t\t\t\t\t", p2, "Turn")
+            print("\n\t\t\t\t\t", p2, "'s turn")
             ch = int(input("\t\t\t\t\tEnter position : "))
             if ch < 10:
                 i = set(ch, "p2")
@@ -228,11 +229,11 @@ def start():
                     game()
                     print("\n\n\t\t\t\t\tGame Tied.....\n\n")
             else:
-                print("\n" * 50)
+                print("\n" * 100)
                 game()
                 print("\n\n\t\t\t\t\t", p2, " Wins.....")
         else:
-            print("\n" * 50)
+            print("\n" * 100)
             game()
             print("\n\n\t\t\t\t\t", p1, " Wins...")
 
@@ -272,6 +273,7 @@ while new == '1':
                 numbers[i][j] = '-'
     else:
         exit(0)
+
 
 ```
 
