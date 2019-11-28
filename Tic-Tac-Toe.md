@@ -200,7 +200,7 @@ def start():
             print("\n" * 100)
             header()
             game()
-            print("\n\t\t\t\t\t", p1, "'s turn")
+            print("\n\t\t\t\t\t", p1 + "'s", "Turn")
             ch = int(input("\t\t\t\t\tEnter position : "))
             if ch < 10:
                 i = set(ch, "p1")
@@ -212,7 +212,7 @@ def start():
             print("\n" * 100)
             header()
             game()
-            print("\n\t\t\t\t\t", p2, "'s turn")
+            print("\n\t\t\t\t\t", p2 + "'s", "Turn")
             ch = int(input("\t\t\t\t\tEnter position : "))
             if ch < 10:
                 i = set(ch, "p2")
@@ -273,6 +273,7 @@ while new == '1':
                 numbers[i][j] = '-'
     else:
         exit(0)
+
 
 
 ```
