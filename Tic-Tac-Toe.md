@@ -197,7 +197,7 @@ def start():
     checker = True
     while checker:
         if i == 1:
-            print("\n" * 100)
+            print("\n" * 50)
             header()
             game()
             print("\n\t\t\t\t\t", p1 + "'s", "Turn")
@@ -209,7 +209,7 @@ def start():
                 print("\t\t\t\t\tPlease Choose Between (0-9)")
 
         elif i == 2:
-            print("\n" * 100)
+            print("\n" * 50)
             header()
             game()
             print("\n\t\t\t\t\t", p2 + "'s", "Turn")
@@ -229,11 +229,11 @@ def start():
                     game()
                     print("\n\n\t\t\t\t\tGame Tied.....\n\n")
             else:
-                print("\n" * 100)
+                print("\n" * 50)
                 game()
                 print("\n\n\t\t\t\t\t", p2, " Wins.....")
         else:
-            print("\n" * 100)
+            print("\n" * 50)
             game()
             print("\n\n\t\t\t\t\t", p1, " Wins...")
 
@@ -266,7 +266,7 @@ new = '1'
 while new == '1':
     start()
     new = input("\n\n\t\tPress 1 for new match or 0 to exit...\n\n")
-    print("\n" * 100)
+    print("\n" * 50)
     if new == "1":
         for i in range(0, 3):
             for j in range(0, 3):
