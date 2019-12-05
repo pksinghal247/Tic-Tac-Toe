@@ -3,6 +3,7 @@ TicTocToe game for two Players in Python
 ## Happy Coding :)
 
 ```python
+
 def title(li):
     for char in li:
         if li.index(char) == 0:
@@ -31,7 +32,8 @@ p1 = ""
 p2 = ""
 
 def header():
-    print("\t\t\t\t\t***************************")
+    print("\033[H\033[J")
+    print("\n\n\n\t\t\t\t\t***************************")
     print("\t\t\t\t\t| TicTacToe By PK Singhal |")
     print("\t\t\t\t\t***************************")
 
@@ -197,7 +199,7 @@ def start():
     checker = True
     while checker:
         if i == 1:
-            print("\n" * 50)
+            print("\033[H\033[J")
             header()
             game()
             print("\n\t\t\t\t\t", p1 + "'s", "Turn")
@@ -209,7 +211,7 @@ def start():
                 print("\t\t\t\t\tPlease Choose Between (0-9)")
 
         elif i == 2:
-            print("\n" * 50)
+            print("\033[H\033[J")
             header()
             game()
             print("\n\t\t\t\t\t", p2 + "'s", "Turn")
@@ -225,15 +227,18 @@ def start():
             if checker:
                 checker = tie()
                 if checker == False:
-                    print("\n" * 100)
+                    print("\033[H\033[J")
+                    header()
                     game()
                     print("\n\n\t\t\t\t\tGame Tied.....\n\n")
             else:
-                print("\n" * 50)
+                print("\033[H\033[J")
+                header()
                 game()
                 print("\n\n\t\t\t\t\t", p2, " Wins.....")
         else:
-            print("\n" * 50)
+            print("\033[H\033[J")
+            header()
             game()
             print("\n\n\t\t\t\t\t", p1, " Wins...")
 
@@ -265,8 +270,8 @@ def checking(val):
 new = '1'
 while new == '1':
     start()
-    new = input("\n\n\t\tPress 1 for new match or 0 to exit...\n\n")
-    print("\n" * 50)
+    new = input("\n\n\t\tPress 1 for new match or 0 to exit...")
+    print("\033[H\033[J")
     if new == "1":
         for i in range(0, 3):
             for j in range(0, 3):
