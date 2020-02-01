@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 TicTocToe game for two Players in Python
-## Happy Coding :)
+## Happy Coding 😊
 
 ```python
 
