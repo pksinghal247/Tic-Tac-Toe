@@ -270,7 +270,7 @@ def checking(val):
 new = '1'
 while new == '1':
     start()
-    new = input("\n\n\t\tPress 1 for new match or 0 to exit...")
+    new = input("\n\n\t\tPress 1 for new match or any key to exit...")
     print("\033[H\033[J")
     if new == "1":
         for i in range(0, 3):
@@ -278,8 +278,6 @@ while new == '1':
                 numbers[i][j] = '-'
     else:
         exit(0)
-
-
 
 ```
 
